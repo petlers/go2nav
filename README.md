@@ -25,3 +25,18 @@ use_odometry = true           -- 启用里程计数据
 use_pose_extrapolator = true  -- 启用位姿外插补偿
 use_imu_data = true           -- 启用IMU惯性数据
 ```
+
+## 三、完整运行流程（真机环境）
+**步骤 1：启动机器人驱动与 SLAM 建图节点**
+```bash
+ros2 launch go2_core go2_start.launch.py
+```
+**步骤 2：键盘遥控建图**
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+**步骤 3：保存地图**
+```bash
+mkdir -p ~/go2_maps
+ros2 run nav2_map_server map_saver_cli -f ~/go2_maps/my_map
+```
