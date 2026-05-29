@@ -41,7 +41,7 @@ mkdir -p ~/go2_maps
 ros2 run nav2_map_server map_saver_cli -f ~/go2_maps/my_map
 ```
 **步骤 4：启动 Nav2 自主导航**
-**关闭建图节点后执行：**
+- 关闭建图节点后执行：
 ```bash
 ros2 launch go2_navigation2 go2_nav2.launch.py
 ```
