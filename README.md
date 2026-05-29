@@ -17,4 +17,11 @@
 **配置文件路径**
 ```plaintext
 src/go2_slam/config/backpack_2d.lua
-
+```
+## 二、多传感器融合配置
+**融合开启核心参数**
+```lua
+use_odometry = true           -- 启用里程计数据
+use_pose_extrapolator = true  -- 启用位姿外插补偿
+use_imu_data = true           -- 启用IMU惯性数据
+```
